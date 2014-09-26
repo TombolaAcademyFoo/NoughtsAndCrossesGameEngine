@@ -18,8 +18,11 @@ Creates a new game, re-setting existing board. Player 1 *always goes first* - bu
 *playertype*  is the type of player. 
 
 **Valid values:** 
-1. 'Human' - the only non-robotic player supported, move sent by client from  
-2. 
+
+1. 'human' - the only non-robotic player supported, move sent by client from  
+2. 'random' - a robotic player that chooses a random square
+3. 'pre-trained' - a pre trained robot using a [MENACE](http://gizmodo.com/5395575/304-matchboxes-filled-with-beans-are-the-perfect-tic-tac-toe-opponent) style engine
+
 ###Response
 { "outcome": "*outcome*", "gamestate": "*gamestate*", "winner": "*winner player number*" }
 
