@@ -15,6 +15,8 @@ Creates a new game, re-setting existing board.
 
 ###Expected Body
 {"player1": "*playertype*", "player2":"*playertype*" }
+###Response
+{ "outcome": "*outcome*", "gamestate": "*gamestate*", "winner": "*winner player number*" }
 
 ###Error responses
 
