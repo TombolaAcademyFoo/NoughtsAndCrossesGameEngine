@@ -52,9 +52,9 @@ If you set both players to be non-human when creating a game, the response shoul
 |  6  |  7  |  8  |
 
 Markdown | Less | Pretty
-0 | 1 | 2
-3 | 4 | 5
-
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
 
 ###Error responses
 
