@@ -46,7 +46,7 @@ If you set both players to be non-human when creating a game, the response shoul
 ####gamestate
 *gamestate*  is a represetion of the game board. It is a string containing 9 digits - each representing one square on the board:
 |   Board  |
-============
+|----------|
 |0 | 1 | 2 |
 |3 | 4 | 5 |
 |6 | 7 | 8 |
