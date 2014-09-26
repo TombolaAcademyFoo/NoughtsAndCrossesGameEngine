@@ -13,15 +13,15 @@ Be liberal with what you expect is for the weak :)
 -----------------
 Creates a new game, re-setting existing board. 
 
-##Expected Body
+###Expected Body
 
-##Error responses
+###Error responses
 
 
 /api/v1.0/makemove
 -----------------
 Makes a move on the existing game - the client must have called newgame before this for it to work.
 
-##Expected Body
+###Expected Body
 
-##Error responses
+###Error responses
