@@ -84,3 +84,16 @@ Makes a move on the existing game - the client must have called newgame before t
 The valid response is exactly the same as the newgame response.
 
 ###Error responses
+
+*player number is not a number* Either the player number is missing, or it is not a number  
+*square number is not a number* Either the square number is missing, or it is not a number  
+*player number must be either 1 or 2* The player number is invalid, must be a whole number 1 or 2  
+*the square position must be an integer in the range 0-8* The player number is invalid, must be a whole number in the range 0 to 8    
+*Square already occupied* The chosen square is already selected - choose again  
+*Player Cannot Play Again* The player made the last move - they cannot move twice!  
+*game already won* Can't continue to make moves when the game is ended.
+
+
+
+
+
