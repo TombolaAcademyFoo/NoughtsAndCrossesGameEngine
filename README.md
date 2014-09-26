@@ -51,8 +51,8 @@ If you set both players to be non-human when creating a game, the response shoul
 |  3  |  4  |  5  |
 |  6  |  7  |  8  |
 
-Markdown | Less | Pretty
---- | --- | ---
+Col | Col | Col
+*---* | --- | ---
 1 | 2 | 3
 
 ###Error responses
