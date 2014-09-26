@@ -19,7 +19,7 @@ Creates a new game, re-setting existing board. Player 1 *always goes first* - bu
 
 ####playertype: 
 
-*playertype*  is the type of player. 
+*playertype*  is the type of player, valid values:
 
 1. 'human' - the only non-robotic player supported, move sent by client from  
 2. 'random' - a robotic player that chooses a random square
@@ -29,15 +29,18 @@ If you set both players to be non-human when creating a game, the response shoul
 
 ###Response
 { "outcome": "*outcome*", "gamestate": "*gamestate*", "winner": "*winner player number*" }
-*outcome*  is the outcome of the game.
+####outcome
 
-**Valid values for *outcome*:** 
+*outcome* is the outcome of the game, valid values
 
-1. 'human' - the only non-robotic player supported, move sent by client from  
-2. 'random' - a robotic player that chooses a random square
-3. 'pre-trained' - a pre trained robot using a
+1. 'Continue' - Continue to play the game - no one has won and squares are available
+2. 'Draw' - The game ended in draw.
+3. 'Win' - A player has won the game.
 
-*winner*  is player number of the game.
+####winner
+*winner*  is player number of player who won the game. 
+1. If *outcome* is win it will be either 1 or 2, depending on whether player 1 or 2 won
+2. Otherwise, it will be 0, even if *outcome* is a draw
 
 *gamestate*  is a represetion of the game board. 
 
