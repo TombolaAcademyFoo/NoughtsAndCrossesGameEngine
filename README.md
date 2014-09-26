@@ -17,7 +17,7 @@ Creates a new game, re-setting existing board. Player 1 *always goes first* - bu
 {"player1": "*playertype*", "player2":"*playertype*" }
 
 
-***playertype*:** 
+####playertype: 
 
 *playertype*  is the type of player. 
 
