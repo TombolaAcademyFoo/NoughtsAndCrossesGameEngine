@@ -15,10 +15,10 @@ Creates a new game, re-setting existing board. Player 1 *always goes first* - bu
 
 ###Expected Body
 {"player1": "*playertype*", "player2":"*playertype*" }
+
+
+***playertype*:** 
 *playertype*  is the type of player. 
-
-**Valid values for *playertype*:** 
-
 1. 'human' - the only non-robotic player supported, move sent by client from  
 2. 'random' - a robotic player that chooses a random square
 3. 'pre-trained' - a pre trained robot using a [MENACE](http://gizmodo.com/5395575/304-matchboxes-filled-with-beans-are-the-perfect-tic-tac-toe-opponent) style engine. This robot should be fairly competant. Note that the training algorithm is not currently supported, so it won't get better with time.
