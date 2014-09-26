@@ -23,10 +23,21 @@ Creates a new game, re-setting existing board. Player 1 *always goes first* - bu
 2. 'random' - a robotic player that chooses a random square
 3. 'pre-trained' - a pre trained robot using a [MENACE](http://gizmodo.com/5395575/304-matchboxes-filled-with-beans-are-the-perfect-tic-tac-toe-opponent) style engine. This robot should be fairly competant. Note that the training algorithm is not currently supported, so it won't get better with time.
 
-If you set 
+If you set both players to be non-human when creating a game, the response should be a completed game, if you set player two only as human, the response will povide the robots's first move.
 
 ###Response
 { "outcome": "*outcome*", "gamestate": "*gamestate*", "winner": "*winner player number*" }
+*outcome*  is the outcome of the game.
+
+*winner*  is player number of the game.
+
+*gamestate*  is a represetion of the game board. 
+
+**Valid values for *outcome*:** 
+
+1. 'human' - the only non-robotic player supported, move sent by client from  
+2. 'random' - a robotic player that chooses a random square
+3. 'pre-trained' - a pre trained robot using a
 
 ###Error responses
 
