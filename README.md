@@ -69,8 +69,14 @@ Examples:
 Makes a move on the existing game - the client must have called newgame before this for it to work.
 
 ###Expected Body
+{"playerNumber": "*playerNumber*", "chosenSquare":"*chosenSquare*" }
+####playerNumber
+*playerNumber* is the number of the player making the move, must be either 1 or 2.
+####chosenSquare
+*chosenSquare* is the index of the square the player wants to play. Must be integer in the range 0-9 and unoccupied.
+
 
 ###Response
-The response is exactly the same as the newgame response.
+The valid response is exactly the same as the newgame response.
 
 ###Error responses
