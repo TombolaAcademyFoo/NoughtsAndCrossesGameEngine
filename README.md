@@ -16,6 +16,7 @@ Creates a new game, re-setting existing board. Player 1 *always goes first* - bu
 ###Expected Body
 {"player1": "*playertype*", "player2":"*playertype*" }
 *playertype*  is the type of player. 
+
 **Valid values:** 
 1. 'Human' - the only non-robotic player supported, move sent by client from  
 2. 
