@@ -29,15 +29,17 @@ If you set both players to be non-human when creating a game, the response shoul
 { "outcome": "*outcome*", "gamestate": "*gamestate*", "winner": "*winner player number*" }
 *outcome*  is the outcome of the game.
 
-*winner*  is player number of the game.
-
-*gamestate*  is a represetion of the game board. 
-
 **Valid values for *outcome*:** 
 
 1. 'human' - the only non-robotic player supported, move sent by client from  
 2. 'random' - a robotic player that chooses a random square
 3. 'pre-trained' - a pre trained robot using a
+
+*winner*  is player number of the game.
+
+*gamestate*  is a represetion of the game board. 
+
+
 
 ###Error responses
 
