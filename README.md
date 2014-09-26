@@ -14,6 +14,7 @@ Be liberal with what you expect is for the weak :)
 Creates a new game, re-setting existing board. 
 
 ###Expected Body
+{"player1": "*playertype*", "player2":"*playertype*" }
 
 ###Error responses
 
