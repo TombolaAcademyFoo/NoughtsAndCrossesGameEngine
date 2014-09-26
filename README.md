@@ -52,7 +52,7 @@ If you set both players to be non-human when creating a game, the response shoul
 |  6  |  7  |  8  |
 
 Col | Col | Col
---- |:---:| ---
+--- |:---:|:---:
 1 | 2 | 3
 
 ###Error responses
