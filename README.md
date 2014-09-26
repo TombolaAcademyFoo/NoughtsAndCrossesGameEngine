@@ -44,13 +44,23 @@ If you set both players to be non-human when creating a game, the response shoul
 
 
 ####gamestate
-*gamestate*  is a represetion of the game board. It is a string containing 9 digits - each representing one square on the board:
+*gamestate*  is a represetion of the game board. It is a string containing 9 digits, the position/index of each representing one square on the board:
 
      |     |     |
 :---:|:---:|:---:|
-  1  |  2  |  3  |
-  1  |  2  |  3  |
-  1  |  2  |  3  |
+  0  |  1  |  2  |
+  3  |  4  |  5  |
+  6  |  7  |  8  |
+  
+Valid values of the digits are 0 - unoccupied, 1 - player 1 has chose, 2 - player two has chosen.
+
+Examples:
+
+* 000000000 - A new blank board
+* 000010000 - Player 1 has chosen the middle square
+* 000010020 - Player 1 has chosen the middle square, player 2 chose the centre square of the bottom row.
+* 220111022 - Player 1 has won by choosing the whole middle row.
+
 ###Error responses
 
 
