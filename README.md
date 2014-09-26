@@ -63,9 +63,7 @@ Examples:
 
 ###Error responses
 *player1 is undefined* - No value has been supplied for player1.
-
 *player2 is undefined* - No value has been supplied for player 2
-
 *unrecognised player type* - One or both player types have been given an unrecognised player type. 
 
 
