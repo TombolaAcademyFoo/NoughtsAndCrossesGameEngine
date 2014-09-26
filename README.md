@@ -70,4 +70,7 @@ Makes a move on the existing game - the client must have called newgame before t
 
 ###Expected Body
 
+###Response
+The response is exactly the same as the newgame response.
+
 ###Error responses
