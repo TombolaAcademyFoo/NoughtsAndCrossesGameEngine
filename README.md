@@ -42,7 +42,13 @@ If you set both players to be non-human when creating a game, the response shoul
 1. If *outcome* is win it will be either 1 or 2, depending on whether player 1 or 2 won
 2. Otherwise, it will be 0, even if *outcome* is a draw
 
-*gamestate*  is a represetion of the game board. 
+
+####gamestate
+*gamestate*  is a represetion of the game board. It is a string containing 9 digits - each representing one square on the board:
+   |   |   
+ 0 | 1 |  2
+   |   |
+---+---+---
 
 
 
