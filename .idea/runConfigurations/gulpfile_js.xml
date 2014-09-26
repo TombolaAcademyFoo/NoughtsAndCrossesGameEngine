@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="gulpfile.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="D:/nodist/nodist/bin/node" path-to-js-file="D:/nodist/nodist/bin/node_modules/gulp/bin/gulp.js" working-dir="$PROJECT_DIR$">
+    <RunnerSettings RunnerId="NodeJS.debug" />
+    <RunnerSettings RunnerId="NodeJS.run" />
+    <ConfigurationWrapper RunnerId="NodeJS.debug" />
+    <ConfigurationWrapper RunnerId="NodeJS.run" />
+    <method />
+  </configuration>
+</component>

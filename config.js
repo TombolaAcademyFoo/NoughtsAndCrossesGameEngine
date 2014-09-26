@@ -1,0 +1,1 @@
+module.exports = {portNumber: 35000, api: {vHostName: 'noughtsandcrosses'}};
