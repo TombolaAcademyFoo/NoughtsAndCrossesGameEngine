@@ -4,10 +4,16 @@ var router = express.Router();
 var gameBoard = require('../noughts-and-crosses/gameboard');
 var robotFactory = require('../noughts-and-crosses/roboticplayerfactory');
 
-router.post('/api/v1.0/newgame', function(req, res) {
+function validateExists(value, message){
+    if(!value)
+        throw message;
+}
 
+router.post('/api/v1.0/newgame', function(req, res) {
     var currentPlayerIndex = 0;
     req.session.lastPlayState = gameBoard.newgameState;
+    validateExists(req.body.player1, 'player1 is undefined');
+    validateExists(req.body.player2, 'player2 is undefined');
     req.session.player1 = req.body.player1;
     req.session.player2 = req.body.player2;
     var currentGame = new gameBoard( req.session.lastPlayState);

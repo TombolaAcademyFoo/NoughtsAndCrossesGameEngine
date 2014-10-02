@@ -56,6 +56,34 @@ describe('POST newgame invalid player type', function() {
                 done();
             });
     });
+    it('player 1 undefined throwa', function (done) {
+        agent
+            .post('/api/v1.0/newgame')
+            .set('Accept', '*/*')
+            .set('Content-Type', 'application/json')
+            .send({player2: 'Zaphod' })
+            .expect(500, 'player1 is undefined\n')
+            .end(function (err) {
+                if (err){
+                    return done(err);
+                }
+                done();
+            });
+    });
+    it('player 2 undefined throwa', function (done) {
+        agent
+            .post('/api/v1.0/newgame')
+            .set('Accept', '*/*')
+            .set('Content-Type', 'application/json')
+            .send({player1: 'human' })
+            .expect(500, 'player2 is undefined\n')
+            .end(function (err) {
+                if (err){
+                    return done(err);
+                }
+                done();
+            });
+    });
     it('invalid player type player 2', function (done) {
         agent
             .post('/api/v1.0/newgame')
@@ -384,7 +412,7 @@ describe('POST newgame human players second player chooses same sqaure', functio
     });
 });
 
-describe('POST newgame human players players incorrect player number', function() {
+describe('POST newgame human players incorrect player number', function() {
     var agent = request.agent(app);
     it('new board', function (done) {
         agent
