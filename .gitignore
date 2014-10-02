@@ -1,5 +1,6 @@
 .build/
-.idea/
+**/.idea/
+./idea/workspaces.xml
 **/bower_components/
 **/node_modules/
 oxo.log
