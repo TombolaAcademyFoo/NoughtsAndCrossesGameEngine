@@ -8,7 +8,9 @@ var app = new express();
 var config = require('./config');
 
 app.use(logger('dev'));
-app.use(vhost(config.api.vHostName, appFactory));
+if(config.api.useVHost) {
+    app.use(vhost(config.api.vHostName, appFactory));
+}
 
 var server = app.listen(config.portNumber, function() {
     console.log('Express server listening on port ' + server.address().port);
