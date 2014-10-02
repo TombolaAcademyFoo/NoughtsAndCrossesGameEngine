@@ -1,6 +1,6 @@
-	
 .build/
 #.idea/
 **/bower_components/
-#**/node_modules/
+**/node_modules/
 oxo.log
+npm-debug.log
