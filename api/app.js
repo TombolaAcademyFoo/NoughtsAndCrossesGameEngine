@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('cookie-session');
 var routes = require('./routes');
-var app = express()
+var app = express();
+var allowCrossDomain = require('./allowcrossdomain');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -22,6 +23,7 @@ app.use(session(({
     }))
 );
 
+app.use(allowCrossDomain);
 app.use('/', routes);
 
 // catch 404 and forward to error handler
