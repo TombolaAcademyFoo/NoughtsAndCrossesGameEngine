@@ -43,7 +43,8 @@ function makeMovesAndSend(currentPlayerIndex, currentGame, req, res ){
     }
 
     req.session.lastPlayState = currentGame.getGameState();
-    var response = { outcome: currentGame.getGameOutcome(), gamestate: currentGame.getGameState(), winner: currentGame.getWinner()};
+    //makes more sense to call the gameState gameboard on the client side.
+    var response = { outcome: currentGame.getGameOutcome(), gameboard: currentGame.getGameState(), winner: currentGame.getWinner()};
     res.contentType='application/json';
     res.setHeader('Last-Modified', (new Date()).toUTCString());
     res.send(response);

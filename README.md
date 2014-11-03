@@ -28,7 +28,7 @@ Creates a new game, re-setting existing board. Player 1 *always goes first* - bu
 If you set both players to be non-human when creating a game, the response should be a completed game, if you set player two only as human, the response will povide the robots's first move.
 
 ###Response
-{ "outcome": "*outcome*", "gamestate": "*gamestate*", "winner": "*winner player number*" }
+{ "outcome": "*outcome*", "gameboard": "*gameboard*", "winner": "*winner player number*" }
 ####outcome
 
 *outcome* is the outcome of the game, valid values
@@ -43,8 +43,8 @@ If you set both players to be non-human when creating a game, the response shoul
 2. Otherwise, it will be 0, even if *outcome* is a draw
 
 
-####gamestate
-*gamestate*  is a represetion of the game board. It is a string containing 9 digits, the position/index of each representing one square on the board:
+####gameboard
+*gameboard*  is a representation of the game board. It is a string containing 9 digits, the position/index of each representing one square on the board:
 
      |     |     |
 :---:|:---:|:---:|

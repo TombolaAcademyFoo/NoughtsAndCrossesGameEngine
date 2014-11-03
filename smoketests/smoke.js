@@ -13,8 +13,8 @@ describe('POST newgame random playes played', function(){
             .send({player1: 'random', player2:'random' })
             .expect(200)
             .expect(function(res){
-                if(!/^[0|1|2]{9}$/.test(res.body.gamestate)){
-                    return 'gamestate ' + res.body.gamestate + ' is not a 9 digit number of 0, 1 or 3';
+                if(!/^[0|1|2]{9}$/.test(res.body.gameboard)){
+                    return 'gamebody ' + res.body.gameboard + ' is not a 9 digit number of 0, 1 or 3';
                 }
                 if(res.body.outcome ==='Win'){
                     if(res.body.winner === 0){
@@ -123,7 +123,7 @@ describe('POST newgame human player player 1', function(){
             .send({player1: 'human', player2:'random' })
             .expect(200)
             .expect({
-                gamestate: '000000000',
+                gameboard: '000000000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -146,8 +146,8 @@ describe('POST newgame human player 1 robot player 2', function(){
             .send({player1: 'human', player2:'random' })
             .expect(200)
             .expect(function(res){
-                if(!/^[0|1]{9}$/.test(res.body.gamestate)){
-                    return 'gamestate ' + res.body.gamestate + ' is not a 9 digit number of 0, 1';
+                if(!/^[0|1]{9}$/.test(res.body.gameboard)){
+                    return 'gameboard ' + res.body.gameboard + ' is not a 9 digit number of 0, 1';
                 }
                 if(res.body.outcome!== 'Continue'){
                     return 'Continue outcome expected when random player has made first move: ' + res.body.outcome ;
@@ -176,7 +176,7 @@ describe('POST newgame human players full game1', function(){
             .send({player1: 'human', player2:'human' })
             .expect(200)
             .expect({
-                gamestate: '000000000',
+                gameboard: '000000000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -195,7 +195,7 @@ describe('POST newgame human players full game1', function(){
             .send({playerNumber: 1, chosenSquare:0 })
             .expect(200)
             .expect({
-                gamestate: '100000000',
+                gameboard: '100000000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -214,7 +214,7 @@ describe('POST newgame human players full game1', function(){
             .send({playerNumber: 2, chosenSquare:3 })
             .expect(200)
             .expect({
-                gamestate: '100200000',
+                gameboard: '100200000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -233,7 +233,7 @@ describe('POST newgame human players full game1', function(){
             .send({playerNumber: 1, chosenSquare:1 })
             .expect(200)
             .expect({
-                gamestate: '110200000',
+                gameboard: '110200000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -252,7 +252,7 @@ describe('POST newgame human players full game1', function(){
             .send({playerNumber: 2, chosenSquare:4 })
             .expect(200)
             .expect({
-                gamestate: '110220000',
+                gameboard: '110220000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -271,7 +271,7 @@ describe('POST newgame human players full game1', function(){
             .send({playerNumber: 1, chosenSquare:2 })
             .expect(200)
             .expect({
-                gamestate: '111220000',
+                gameboard: '111220000',
                 outcome: 'Win',
                 winner: 1
             })
@@ -308,7 +308,7 @@ describe('POST newgame human players repeated move', function() {
             .send({player1: 'human', player2: 'human' })
             .expect(200)
             .expect({
-                gamestate: '000000000',
+                gameboard: '000000000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -327,7 +327,7 @@ describe('POST newgame human players repeated move', function() {
             .send({playerNumber: 1, chosenSquare: 0 })
             .expect(200)
             .expect({
-                gamestate: '100000000',
+                gameboard: '100000000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -365,7 +365,7 @@ describe('POST newgame human players second player chooses same sqaure', functio
             .send({player1: 'human', player2: 'human' })
             .expect(200)
             .expect({
-                gamestate: '000000000',
+                gameboard: '000000000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -384,7 +384,7 @@ describe('POST newgame human players second player chooses same sqaure', functio
             .send({playerNumber: 1, chosenSquare: 0 })
             .expect(200)
             .expect({
-                gamestate: '100000000',
+                gameboard: '100000000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -422,7 +422,7 @@ describe('POST newgame human players incorrect player number', function() {
             .send({player1: 'human', player2: 'human' })
             .expect(200)
             .expect({
-                gamestate: '000000000',
+                gameboard: '000000000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -460,7 +460,7 @@ describe('POST newgame human players player number not a number', function() {
             .send({player1: 'human', player2: 'human' })
             .expect(200)
             .expect({
-                gamestate: '000000000',
+                gameboard: '000000000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -498,7 +498,7 @@ describe('POST newgame human players incorrect square number', function() {
             .send({player1: 'human', player2: 'human' })
             .expect(200)
             .expect({
-                gamestate: '000000000',
+                gameboard: '000000000',
                 outcome: 'Continue',
                 winner: 0
             })
@@ -536,7 +536,7 @@ describe('POST newgame human players square number NaN', function() {
             .send({player1: 'human', player2: 'human' })
             .expect(200)
             .expect({
-                gamestate: '000000000',
+                gameboard: '000000000',
                 outcome: 'Continue',
                 winner: 0
             })
