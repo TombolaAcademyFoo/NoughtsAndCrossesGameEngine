@@ -14,7 +14,7 @@ else {
     app = appFactory;
 }
 
-app.use(logger('dev'));
+app.use(logger('combined'));
 
 app.disable('etag');//prevent the http 304 (not modified) responses, less efficient but better for seeing what it going on.;
 

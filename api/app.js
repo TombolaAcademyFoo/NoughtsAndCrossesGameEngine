@@ -8,7 +8,7 @@ var routes = require('./routes');
 var app = express();
 var allowCrossDomain = require('./allowcrossdomain');
 
-app.use(logger('dev'));
+app.use(logger('combinednam'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
