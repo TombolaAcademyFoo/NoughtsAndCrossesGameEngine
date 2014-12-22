@@ -1,8 +1,6 @@
 'use strict';
 var gameBoard = require('./gameboard');
 var robotPlayer = require('./robotplayer');
-var logger = require('./logger');
-
 
 var stateTrainer = function () {
 
@@ -31,8 +29,6 @@ var stateTrainer = function () {
                 playerToLearnFrom = players[playerIndexToUse];
             }
         }
-        logger.log('verbose',result, currentState);
-        logger.log('verbose', result);
         currentState = playerToLearnFrom.analyseGame(result);
     }
 
@@ -42,7 +38,6 @@ var stateTrainer = function () {
         /*Keep playing & break on win or draw*/
         var moveNumber = 0;
         while (!currentGame.isGameEnded()){
-            logger.log('silly',' Move: ' + moveNumber);
             currentPlayer = players[(moveNumber % 2)];
             move();
             moveNumber++;
@@ -53,7 +48,6 @@ var stateTrainer = function () {
     this.train = function(originalState, trainingCycles) {
         currentState = originalState;
         for(var i= 0; i < trainingCycles; i++){
-            logger.log('silly', 'Learning Cycle: ' + i);
             trainCycle();
         }
         return currentState;

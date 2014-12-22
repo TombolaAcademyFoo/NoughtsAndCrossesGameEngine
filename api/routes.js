@@ -29,6 +29,18 @@ router.post('/api/v1.0/makemove', function(req, res) {
     makeMovesAndSend(currentPlayerIndex,currentGame, req, res);
 });
 
+
+router.post('/api/v1.0/maketrained', function(req, res) {
+    var statetrainer = require('../noughts-and-crosses/statetrainer');
+    var learnedStates = require('../noughts-and-crosses/learnedstatefactory');
+
+    var numberCycles = parseInt(req.body.numberCycles);
+    var newState = learnedStates.getNewlyTrained(numberCycles);
+    res.contentType='application/json';
+    res.setHeader('Last-Modified', (new Date()).toUTCString());
+    res.send(newState);
+});
+
 function makeMovesAndSend(currentPlayerIndex, currentGame, req, res ){
 
     var players = [robotFactory.createRobot(req.session.player1 ,1), robotFactory.createRobot(req.session.player2 ,2)];
