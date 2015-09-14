@@ -1,7 +1,7 @@
 NoughtsAndCrossesGameEngine
 ===========================
 
-A basic Noughts And Crosses Game api. Information about the current game is stored in the cookie - so of you delete or alter that, an error will occur. 
+A basic Noughts And Crosses Game api. Information about the current game is stored in the cookie - so of you delete or alter that, an error will occur. To send the cookie the http withCredentials must be set to true for requests.
 
 API
 ===
